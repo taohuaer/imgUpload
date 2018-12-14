@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.hide {
+  display: none;
+}
+.picBox {
+  margin-top: 40px;
+  margin-left: 40px;
+  position: relative;
+  width: 260px;
+  height: 190px;
+}
+.picBox label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 260px;
+  height: 190px;
+  border: 1px solid red;
+  z-index: 8;
+}
+.picBox input {
+  display: none;
+}
+.picBox #preview {
+  width: 260px;
+  height: 190px;
+  border: 1px solid #000;
+  overflow: hidden;
+  background: url(../images/imgUserZhanwei.png) no-repeat 50% 50%;
+}
+.picBox #preview div {
+  width: 260px;
+  height: 190px;
+}
+.picBox .upload-msg {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  z-index: 9;
+}
+.picBox .upload-msg div {
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.picBox .upload-tip {
+  position: absolute;
+  right: 1px;
+  top: 2px;
+  z-index: 9;
+}
+.picBox .upload-tip div {
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  border: 1px solid red;
+}
+.picBox .upload-tip .close {
+  margin-bottom: 5px;
+}
+.picBox .upload-tip .uploading:hover,
+.picBox .upload-tip .close:hover {
+  background: red;
+  color: #fff;
+}

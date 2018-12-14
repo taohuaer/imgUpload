@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>上传图片</title>
+    <link rel="stylesheet" href="./css/index.css">
+
+
+</head>
+<style>
+
+</style>
+
+<body>
+    <!-- <img id="imghead" name="imghead" width="100%" height="auto" border="0" src="./images/imgUserZhanwei.png"> -->
+    <form id='FormImg' name='FormImg' method='post' enctype='multipart/form-data' class="hide"></form>
+    <div class="picBox">
+
+        <label for="inputImg"></label>
+        <input id="inputImg" type="file" class="hide" accept="image/gif, image/jpeg">
+        <div id="preview">
+
+        </div>
+        <div class="upload-tip hide">
+            <div class="close hide">X</div>
+            <div class="uploading hide">up</div>
+        </div>
+        <div class="upload-msg hide">
+            <div></div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="./js/form.js"></script>
+<script src="./js/index.js"></script>
+<script type="text/javascript">
+    $(".picBox").imgUpload({
+        url: "http://localhost:3456/uploadimg",
+        imgType: [".png", ".jpg"],
+        autoUpload: false,
+        preUpload: function(index) {
+            // 上传前操作
+            // console.log(index)
+        }
+    })
+</script>
+
+
+
+</html>
